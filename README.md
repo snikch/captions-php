@@ -9,12 +9,14 @@ It's alway nice to hear about people using your code, so if you use this library
 ## Status
 ### Currently working:
 - Parse & Render SRT Files
+- Render Dfxp (TTML) Files
 - Time shift all captions from the start, or a given caption index
 
 ### To Do
-- Support DFXP format
+- Support parsing DFXP format
 - Support Shrinking and enlarging of individual caption times
 - SRT Caption positioning support
+- SRT & Dfxp Style Support
 
 ## Usage
 
@@ -48,9 +50,9 @@ It's alway nice to hear about people using your code, so if you use this library
 	$captions->render("my_new_captions.srt");
 
 #### Dependency free
-	$renderer = new Captions_Renderer_SrtRenderer;
+	$renderer = new Captions_Renderer_DfxpRenderer;
 
-	$renderer->render($captions, "my_captions.srt"); // File output parameter optional (return string)
+	$renderer->render($captions, "my_captions.xml"); // File output parameter optional (return string)
 
 ## Tests
 Tests are in the tests folder and require simpletest
