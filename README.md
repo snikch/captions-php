@@ -54,4 +54,4 @@ It's alway nice to hear about people using your code, so if you use this library
 
 ## Tests
 Tests are in the tests folder and require simpletest
-	1/2 test cases complete: 3 passes, 0 fails and 0 exceptions.
+	Completed 4 of 4 tests in 1.35 seconds with 0 failures
