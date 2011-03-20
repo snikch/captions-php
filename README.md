@@ -7,7 +7,7 @@ MIT - See LICENCE file.
 It's alway nice to hear about people using your code, so if you use this library in your code feel free to let me know. It gives me warm fuzzies and motivates me to keep writing.
 
 ## Status
-Currently only a basic subset of all features are available
+### Currently working:
 - Parse & Render SRT Files
 - Time shift all captions from the start, or a given caption index
 
@@ -19,6 +19,7 @@ Currently only a basic subset of all features are available
 ## Usage
 
 ### Existing Captions
+	<?PHP
 	$captions = Captions::from_srt(file_get_contents("my_captions.srt"));
 	// Returns instance of Captions_Set
 
@@ -27,6 +28,7 @@ Currently only a basic subset of all features are available
 
 ### Adding Captions
 
+	<?PHP
 	$caption = new Captions_Caption;
 	$caption->text("And then I said, but what about the monkeys?")
 		->start(0)
@@ -35,6 +37,7 @@ Currently only a basic subset of all features are available
 
 ### Altering Captions
 
+	<?PHP
 	$captions->rewind(1.5); // Rewinds all captions 1.5 seconds
 
 	$captions->fast_forward(2.5, 8); // Fast forwards all captions from 8 onwards by 2.5 seconds
@@ -42,6 +45,7 @@ Currently only a basic subset of all features are available
 ### Rendering Captions
 
 #### Caption_Set dependency
+	<?PHP
 	$captions->renderer(new Captions_Renderer_SrtRenderer);
 	echo $captions->render();
 
@@ -50,6 +54,7 @@ Currently only a basic subset of all features are available
 	$captions->render("my_new_captions.srt");
 
 #### Dependency free
+	<?PHP
 	$renderer = new Captions_Renderer_SrtRenderer;
 
 	$renderer->render($captions, "my_captions.srt"); // File output parameter optional (return string)
