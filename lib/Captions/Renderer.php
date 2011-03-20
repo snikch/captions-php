@@ -2,5 +2,5 @@
 
 interface Captions_Renderer
 {
-	public function render($captions, $file = false);
+	public function render($caption_set, $file = false);
 }

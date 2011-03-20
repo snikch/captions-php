@@ -3,11 +3,11 @@
 class Captions_Renderer_SrtRenderer
 	implements Captions_Renderer
 {
-	public function render($captions, $file = false)
+	public function render($caption_set, $file = false)
 	{
 		$string = "";
 
-		foreach($captions->captions() as $index => $caption)
+		foreach($caption_set->captions() as $index => $caption)
 		{
 			$string .= sprintf("%d\n%s --> %s\n%s\n\n",
 				$index+1,
