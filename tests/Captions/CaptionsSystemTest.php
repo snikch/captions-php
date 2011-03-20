@@ -34,14 +34,14 @@ class CaptionsSystemTest extends CaptionsUnitTestCase
 		$caption = new Captions_Caption;
 		$caption->text('Text One')
 			->start(1.123)
-			->end(31.123);
+			->end(31.228);
 
 		$match->add_caption($caption);
 
 		$caption = new Captions_Caption;
 		$caption->text('Text Two')
 			->start(31.123)
-			->end(61.123);
+			->end(61.172); // Floating Point Hack
 		$match->add_caption($caption);
 
 		$captions = $this->_simple_captions_set();

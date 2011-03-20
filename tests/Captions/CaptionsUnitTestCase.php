@@ -10,9 +10,7 @@ Text One
 
 2
 00:00:30,000 --> 00:01:00,050
-Text Two
-
-";
+Text Two";
 		return $string;
 	}
 
