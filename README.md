@@ -19,7 +19,6 @@ It's alway nice to hear about people using your code, so if you use this library
 ## Usage
 
 ### Existing Captions
-	<?PHP
 	$captions = Captions::from_srt(file_get_contents("my_captions.srt"));
 	// Returns instance of Captions_Set
 
@@ -27,8 +26,6 @@ It's alway nice to hear about people using your code, so if you use this library
 	$captions = new Captions_Set;
 
 ### Adding Captions
-
-	<?PHP
 	$caption = new Captions_Caption;
 	$caption->text("And then I said, but what about the monkeys?")
 		->start(0)
@@ -36,16 +33,13 @@ It's alway nice to hear about people using your code, so if you use this library
 	$captions->add_caption($caption);
 
 ### Altering Captions
-
-	<?PHP
 	$captions->rewind(1.5); // Rewinds all captions 1.5 seconds
 
-	$captions->fast_forward(2.5, 8); // Fast forwards all captions from 8 onwards by 2.5 seconds
+	$captions->fast_forward(2.5, 8); // Fast forwards all captions from caption #8 onwards by 2.5 seconds
 
 ### Rendering Captions
 
 #### Caption_Set dependency
-	<?PHP
 	$captions->renderer(new Captions_Renderer_SrtRenderer);
 	echo $captions->render();
 
@@ -54,11 +48,10 @@ It's alway nice to hear about people using your code, so if you use this library
 	$captions->render("my_new_captions.srt");
 
 #### Dependency free
-	<?PHP
 	$renderer = new Captions_Renderer_SrtRenderer;
 
 	$renderer->render($captions, "my_captions.srt"); // File output parameter optional (return string)
 
 ## Tests
-Tests are in the tests folder and require simpletes
+Tests are in the tests folder and require simpletest
 	1/2 test cases complete: 3 passes, 0 fails and 0 exceptions.
