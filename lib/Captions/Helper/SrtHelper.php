@@ -21,6 +21,10 @@ class Captions_Helper_SrtHelper
 
 	public function time_to_string($time)
 	{
+		// Let's hardcode hack this floating point bitch
+		$time = (string) $time;
+		$time = (float) $time;
+
 		$hours = floor($time/60/60);
 
 		$minutes = floor(($time/60) % 60);
