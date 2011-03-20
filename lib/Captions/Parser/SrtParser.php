@@ -11,7 +11,7 @@ class Captions_Parser_SrtParser
 		$this->_captions_string = str_replace(pack("CCC",0xef,0xbb,0xbf), "", $content);
 	}
 
-	public function create_captions_set()
+	public function parse()
 	{
 		$split_regex = "/(\d)+[\r|\n][\r\n]?(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})[\r\n]{1,2}/";
 

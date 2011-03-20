@@ -22,5 +22,4 @@ class Captions_Renderer_SrtRenderer
 		else
 			return $string;
 	}
-	
 }
