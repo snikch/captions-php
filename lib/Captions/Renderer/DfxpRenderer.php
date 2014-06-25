@@ -47,13 +47,13 @@ class Captions_Renderer_DfxpRenderer
 			));
 			$entry->appendChild($to);
 
-			$entry->appendChild($dom->createTextNode($caption->text()));
+			$entry->appendChild($dom->createCDATASection($caption->text()));
 
 			$div->appendChild($entry);
 		}
 
 		if($file)
-			return file_put_contents($file, $dom->saveHTML());
+			return file_put_contents($file, $dom->saveXML());
 		else
 			return $dom->saveHTML();
 	}
