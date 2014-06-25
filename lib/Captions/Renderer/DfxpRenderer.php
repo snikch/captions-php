@@ -53,7 +53,7 @@ class Captions_Renderer_DfxpRenderer
 		}
 
 		if($file)
-			return file_put_contents($dom->saveHTML());
+			return file_put_contents($file, $dom->saveHTML());
 		else
 			return $dom->saveHTML();
 	}
